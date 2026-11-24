@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2e8b57"/>
+    </marker>
+  </defs>
+  <rect width="820" height="400" fill="#ffffff"/>
+
+  <!-- Pedido -->
+  <rect x="20" y="70" width="110" height="60" rx="30" fill="#f4f4f4" stroke="#888" stroke-width="1.5"/>
+  <text x="75" y="98" text-anchor="middle" font-size="16" fill="#222">📝 Pedido</text>
+  <text x="75" y="117" text-anchor="middle" font-size="12" fill="#666">del cliente</text>
+  <line x1="130" y1="100" x2="188" y2="100" stroke="#444" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Barista -->
+  <rect x="190" y="50" width="210" height="100" rx="14" fill="#fdf0e1" stroke="#a0522d" stroke-width="2"/>
+  <text x="295" y="92" text-anchor="middle" font-size="20" font-weight="bold" fill="#6b3410">🧑‍🍳 Barista</text>
+  <text x="295" y="118" text-anchor="middle" font-size="14" fill="#6b3410">generador</text>
+
+  <!-- borrador -->
+  <line x1="400" y1="100" x2="508" y2="100" stroke="#444" stroke-width="2" marker-end="url(#a)"/>
+  <text x="454" y="90" text-anchor="middle" font-size="14" fill="#333" font-style="italic">borrador</text>
+
+  <!-- Manager -->
+  <rect x="510" y="50" width="250" height="100" rx="14" fill="#e6eefb" stroke="#2c5aa0" stroke-width="2"/>
+  <text x="635" y="88" text-anchor="middle" font-size="20" font-weight="bold" fill="#1d3f73">🕵️ Manager</text>
+  <text x="635" y="110" text-anchor="middle" font-size="14" fill="#1d3f73">crítico / evaluador</text>
+  <text x="635" y="132" text-anchor="middle" font-size="12" fill="#1d3f73" font-family="Menlo, monospace">{pasa_filtro, feedback}</text>
+
+  <!-- Decisión -->
+  <line x1="635" y1="150" x2="635" y2="198" stroke="#444" stroke-width="2" marker-end="url(#a)"/>
+  <polygon points="635,200 715,240 635,280 555,240" fill="#fff8d6" stroke="#b8960b" stroke-width="2"/>
+  <text x="635" y="245" text-anchor="middle" font-size="13" font-weight="bold" fill="#5a4a00">¿pasa_filtro?</text>
+
+  <!-- false: vuelve al barista -->
+  <path d="M555,240 L295,240 L295,152" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+  <text x="425" y="232" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="bold">false → feedback</text>
+  <text x="425" y="258" text-anchor="middle" font-size="12" fill="#c0392b">el barista lo vuelve a intentar</text>
+
+  <!-- true: cliente -->
+  <line x1="635" y1="280" x2="635" y2="318" stroke="#2e8b57" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="645" y="303" font-size="13" fill="#2e8b57" font-weight="bold">true</text>
+  <rect x="535" y="320" width="200" height="46" rx="10" fill="#e3f5ea" stroke="#2e8b57" stroke-width="2"/>
+  <text x="635" y="349" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e5e3a">✅ Se muestra al cliente</text>
+
+  <!-- nota -->
+  <rect x="20" y="300" width="430" height="66" rx="10" fill="#f7f7f7" stroke="#bbb" stroke-dasharray="4 3"/>
+  <text x="40" y="326" font-size="13" fill="#333" font-weight="bold">🔁 Máximo 3 intentos</text>
+  <text x="40" y="348" font-size="13" fill="#555">Si ninguno pasa el filtro → respuesta de reserva (plan B)</text>
+</svg>
