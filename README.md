@@ -16,9 +16,9 @@ crítico la aprueba.
 | Sección | Qué hacen los asistentes |
 |---|---|
 | 0. Preparación | Se les da `llamar_modelo(system, user)` ya hecha |
-| 1. Barista | **Reto 1:** inyectar el feedback y el borrador anterior en el prompt |
-| 2. Manager | **Reto 2:** leer el JSON de forma robusta y *fail-closed* (tests sin LLM) |
-| 3. Orquestación | **Reto 3:** el bucle generar → evaluar → corregir, con límite y respuesta de reserva |
+| 1. Barista | **Reto:** inyectar el feedback y el borrador anterior en el prompt |
+| 2. Manager | **Reto:** leer el JSON de forma robusta y *fail-closed* (tests sin LLM) |
+| 3. Orquestación | **Reto:** el bucle generar → evaluar → corregir, con límite y respuesta de reserva |
 | 4. Varios pedidos | Tasa de aprobación, número de intentos y coste en llamadas/tokens |
 | 5. ¿Quién vigila al vigilante? | Juez LLM frente a regla determinista, inyección de prompt contra el manager |
 | 6. Retos extra | Guided decoding (`guided_json`), tercer agente, historial acumulado, temperatura... |
